@@ -8,6 +8,7 @@ import {AuthService} from '../auth/auth';
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.html',
   styleUrl: './header.css',
+  standalone: true
 })
 export class Header {
   private authService = inject(AuthService);

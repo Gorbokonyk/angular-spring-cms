@@ -1,14 +1,27 @@
-import {computed, Injectable, signal} from '@angular/core';
+import { isPlatformBrowser } from "@angular/common";
+import {computed, Injectable, signal, inject, PLATFORM_ID } from '@angular/core';
+
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService  {
-  private token = signal<string | null>(localStorage.getItem('token'));
-  private role = signal<string | null>(localStorage.getItem('userRole'));
+
+  private platformId = inject(PLATFORM_ID);
+  private isBrowser = isPlatformBrowser(this.platformId);
+
+  private token = signal<string | null>(null);
+  private role = signal<string | null>(null);
 
   isLoggedIn = computed(() => !!this.token());
   isAdmin = computed(() => this.role() === 'admin');
+
+
+  constructor() {
+    this.token.set(this.getFromStorage('token'));
+    this.role.set(this.getFromStorage('userRole'));
+  }
 
 
   login(token: string, role: string): void {

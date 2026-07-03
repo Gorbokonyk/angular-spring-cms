@@ -7,6 +7,7 @@ import {Room} from './models/room.model';
   imports: [],
   templateUrl: './rooms.html',
   styleUrl: './rooms.css',
+  standalone: true
 })
 export class Rooms {
   private roomService: RoomService = inject(RoomService);
