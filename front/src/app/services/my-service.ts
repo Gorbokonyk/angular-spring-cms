@@ -8,4 +8,5 @@ export class MyService {
     if (typeof window === 'undefined') return null; // window немає на сервері
     return localStorage.getItem(key);
   }
+
 }

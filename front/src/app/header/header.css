@@ -1,0 +1,124 @@
+/* header.component.css */
+
+:host {
+  --bg-color: #1e1e24;
+  --text-color: #f5f5f7;
+  --accent-color: #3b82f6; /* красивий синій */
+  --accent-hover: #1d4ed8;
+  --danger-color: #ef4444; /* червоний для logout */
+  --danger-hover: #dc2626;
+  --nav-gap: 1.5rem;
+
+  display: block;
+  width: 100%;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Логотип */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: -0.05em;
+  transition: color 0.2s ease;
+}
+
+.logo a:hover {
+  color: var(--accent-color);
+}
+
+/* Навігація */
+nav {
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap);
+}
+
+/* Посилання в меню */
+nav a {
+  color: #9ca3af; /* приглушений сірий колір */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Активний стан посилання (routerLinkActive="active") */
+nav a.active {
+  color: var(--text-color);
+  background-color: rgba(59, 130, 246, 0.15); /* легкий синій фон */
+  box-shadow: inset 0 -2px 0 var(--accent-color); /* лінія знизу */
+  border-radius: 6px 6px 2px 2px;
+}
+
+/* Кнопка Logout та Login як кнопка (за бажанням) */
+button, nav a[routerLink="/login"] {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Кнопка входу (Акцентна) */
+nav a[routerLink="/login"] {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+nav a[routerLink="/login"]:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Кнопка виходу (Червона/Контурна) */
+button {
+  color: var(--danger-color);
+  background-color: transparent;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: var(--danger-color);
+  border-color: var(--danger-hover);
+}
+
+button:active, nav a[routerLink="/login"]:active {
+  transform: scale(0.98);
+}
+
+/* Адаптивність для мобільних */
+@media (max-width: 640px) {
+  .app-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}

@@ -37,4 +37,25 @@ export class AuthService  {
     this.token.set(null);
     this.role.set(null);
   }
+
+  getToken(): string | null {
+    return this.token();
+  }
+
+  private getFromStorage(key: string): string | null {
+    if (!this.isBrowser) return null;
+    return localStorage.getItem(key);
+  }
+
+  private setToStorage(key: string, value: string): void {
+    if (!this.isBrowser) return;
+    return localStorage.setItem(key, value);
+  }
+
+  private removeFromStorage(key: string): void {
+    if (!this.isBrowser) return;
+    localStorage.removeItem(key);
+  }
+
+
 }
