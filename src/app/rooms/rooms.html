@@ -1,0 +1,37 @@
+<!-- room-list.component.html -->
+@if (loading()) {
+  <p class="status-message">Завантаження...</p>
+} @else if (error()) {
+  <p class="status-message error">{{ error() }}</p>
+} @else {
+  <table class="room-table">
+    <thead>
+    <tr>
+      <th>Фото</th>
+      <th>Назва</th>
+      <th>Місткість</th>
+      <th>Статус</th>
+    </tr>
+    </thead>
+    <tbody>
+      @for (room of rooms(); track room.id) {
+        <tr [class.unav6ailable]="!room.available">
+          <td>
+            @if (room.imageUrl) {
+              <img [src]="room.imageUrl" [alt]="room.name" class="room-thumb" />
+            } @else {
+              <div class="room-thumb placeholder">—</div>
+            }
+          </td>
+          <td class="room-name">{{ room.name }}</td>
+          <td>{{ room.capacity }} осіб</td>
+          <td>
+            <span class="badge" [class.badge-free]="room.available" [class.badge-busy]="!room.available">
+              {{ room.available ? 'Вільна' : 'Зайнята' }}
+            </span>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+}
