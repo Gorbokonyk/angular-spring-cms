@@ -34,4 +34,38 @@
       }
     </tbody>
   </table>
+
+
+
+
+  <div class="radio-container">
+    <label class="radio-label">
+      <input type="radio" name="subscriptionType" value="VIP-Кімната-0" (change)="diyaNa_Vybir1($event)">
+      VIP Кімната 0
+    </label>
+
+    <label class="radio-label">
+      <input type="radio" name="subscriptionType" value="VIP-Кімната-1" (change)="diyaNa_Vybir1($event)">
+      VIP Кімната 1
+    </label>
+
+    <label class="radio-label">
+      <input type="radio" name="subscriptionType" value="VIP-Кімната-2" (change)="diyaNa_Vybir1($event)">
+      VIP Кімната 2
+    </label>
+
+    <label class="radio-label">
+      <input type="radio" name="subscriptionType" value="VIP-Кімната-3" (change)="diyaNa_Vybir1($event)">
+      VIP Кімната 3
+    </label>
+  </div>
+
+  @if (isToastVisible() && toastMessage()) {
+    <div class="side-toast">
+      <div class="toast-content">
+        <span class="toast-icon">🔔</span>
+        <p>{{ toastMessage() }}</p>
+      </div>
+    </div>
+  }
 }

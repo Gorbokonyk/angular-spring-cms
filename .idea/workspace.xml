@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="695f2e1e-1d36-40cf-b876-a620f8b19b8f" name="Changes" comment="changes">
-      <change afterPath="$PROJECT_DIR$/front/src/app/dto/test.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/auth/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/auth/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/footer/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/footer/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/footer/footer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/footer/footer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/header/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/header/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/app/services/my-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/services/my-service.ts" afterDir="false" />
+    <list default="true" id="695f2e1e-1d36-40cf-b876-a620f8b19b8f" name="Changes" comment="add code">
+      <change beforePath="$PROJECT_DIR$/front/src/app/rooms/rooms.ts" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/app/rooms/rooms.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +107,9 @@
       <workItem from="1783098795398" duration="493000" />
       <workItem from="1783099345943" duration="2046000" />
       <workItem from="1783105514449" duration="1815000" />
-      <workItem from="1783108234763" duration="334000" />
+      <workItem from="1783108234763" duration="982000" />
+      <workItem from="1783249251070" duration="5412000" />
+      <workItem from="1783267485613" duration="2396000" />
     </task>
     <task id="LOCAL-00001" summary="add test component">
       <option name="closed" value="true" />
@@ -133,7 +127,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783098876187</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add footer and header">
+      <option name="closed" value="true" />
+      <created>1783108711935</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1783108711935</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add code">
+      <option name="closed" value="true" />
+      <created>1783271982350</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783271982350</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,18 +163,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add test component" />
     <MESSAGE value="changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/front/src/app/footer/footer.ts</url>
-          <line>25</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add footer and header" />
+    <MESSAGE value="add code" />
+    <option name="LAST_COMMIT_MESSAGE" value="add code" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, inject, output, signal} from '@angular/core';
 import {RoomService} from './service/service';
 import {Room} from './models/room.model';
 
@@ -16,6 +16,11 @@ export class Rooms {
   error = signal<string | null>(null);
 
   rooms = signal<Room[]>([]);
+
+  toastMessage = signal<string>('');
+  isToastVisible = signal<boolean>(false);
+  private timerId: any;
+
   constructor() {
     this.roomService.getRooms().subscribe({
       next: (roomData) => {
@@ -28,5 +33,21 @@ export class Rooms {
         this.loading.set(false);
       }
     });
+  }
+
+  diyaNa_Vybir1(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (!input || !input.value) return;
+    // 1. Встановлюємо текст та показуємо вікно
+    this.toastMessage.set(`Ви залочили: ${input.value}`);
+    this.isToastVisible.set(true);
+
+    if (this.timerId) {
+      clearTimeout(this.timerId);
+    }
+
+    this.timerId = window.setTimeout(() => {
+      this.isToastVisible.set(false);
+    }, 3000);
   }
 }

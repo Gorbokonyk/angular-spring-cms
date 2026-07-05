@@ -20,9 +20,16 @@ export class Footer {
     createdAt: new Date().toISOString()
   }
 
-  subscribeClicked = output<TestDto>();
+  testAllButton1 = output<void>();
+  subscribeClicked2 = output<void>();
+  importMockTestDto = output<TestDto>();
 
-  onSubscribe(): void {
-    this.subscribeClicked.emit(this.testDtoExample);
+  testFunction111(): void {
+    this.testAllButton1.emit();
+    console.log(this.testDtoExample.pricePerNight);
+  }
+  testFunction22(): void {
+    this.subscribeClicked2.emit();
+    console.log(this.testDtoExample.pricePerNight);
   }
 }

@@ -17,7 +17,10 @@ export class App {
 
   private readonly _count = signal(0);
 
-  handleSubscribe(testDto: TestDto){
-    alert(testDto.pricePerNight);
+  handleSubscribe(){
+    alert("2222222222222");
+  }
+  handleSubscribe2(){
+    alert("111111111");
   }
 }
